@@ -1,4 +1,7 @@
-let lang = 'en';
+let lang =
+    navigator.languages && navigator.languages.length
+        ? navigator.languages[0]
+        : navigator.language;
 const translations = {
 
     // English translations

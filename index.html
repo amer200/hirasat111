@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>hirsat</title>
+    <title langKey="page-title">hirsat</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <!-- fonts
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -43,7 +47,7 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html">
+            <a class="site-logo" href="/">
                 <img src="images/logo.jpg" alt="Homepage">
             </a>
         </div>
@@ -53,14 +57,23 @@
             <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
 
             <div class="header-nav__content">
-                <h3>Navigation</h3>
+                <h3 langKey="nav-title">Navigation</h3>
 
                 <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                    <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
-                    <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+                    <li class="current"><a class="smoothscroll" href="#home" title="home" langKey="nav-home">Home</a>
+                    </li>
+                    <li><a class="smoothscroll" href="#about" title="about" langKey="nav-about">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="services" langKey="nav-serv">Services</a></li>
+                    <li><a class="smoothscroll" href="#clients" title="clients" langKey="nav-clints">Clients</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="contact" langKey="nav-contact">Contact</a></li>
+                </ul>
+                <ul class="header-nav__list">
+                    <li>
+                        <select onchange="switcherLang(this)" class="locale-switcher form-select" id="switcherLang">
+                            <option value="en">English</option>
+                            <option value="ar">Arabic (العربية)</option>
+                        </select>
+                    </li>
                 </ul>
                 <ul class="header-nav__social">
                     <li>
@@ -77,7 +90,7 @@
         </nav> <!-- end header-nav -->
 
         <a class="header-menu-toggle" href="#0">
-            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-text" langKey="nav-menu">Menu</span>
             <span class="header-menu-icon"></span>
         </a>
 
@@ -96,13 +109,13 @@
 
             <div class="row home-content__main">
 
-                <h3>Welcome to Hirsat</h3>
+                <h3 langKey="home-title">Welcome to Hirsat</h3>
 
                 <div class="home-content__buttons">
-                    <a href="#contact" class="smoothscroll btn btn--stroke">
+                    <a href="#contact" class="smoothscroll btn btn--stroke" langKey="home-contact-btn">
                         Contact Us
                     </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
+                    <a href="#about" class="smoothscroll btn btn--stroke" langKey="home-about-btn">
                         More About Us
                     </a>
                 </div>
@@ -141,13 +154,13 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1 display-1--light">About Us</h1>
+                <h1 class="display-1 display-1--light" langKey="about-title">About Us</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row about-desc" data-aos="fade-up">
             <div class="col-full">
-                <p>
+                <p langKey="about-content">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -168,7 +181,7 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1--light">Services</h1>
+                <h1 class="display-1--light" langKey="serv-title">Services</h1>
             </div>
         </div> <!-- end section-header -->
 
@@ -179,8 +192,9 @@
                     <i class="fa fa-shield" aria-hidden="true"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Lorem ipsum dolor sit amet</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                    <h3 class="h2" langKey="serv1-title">Lorem ipsum dolor sit amet</h3>
+                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
+                        laudantium.
                         Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                         Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -192,8 +206,9 @@
                     <i class="fa fa-shield" aria-hidden="true"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Lorem ipsum dolor sit amet</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                    <h3 class="h2" langKey="serv2-title">Lorem ipsum dolor sit amet</h3>
+                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
+                        laudantium.
                         Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                         Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -205,8 +220,9 @@
                     <i class="fa fa-shield" aria-hidden="true"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Lorem ipsum dolor sit amet</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                    <h3 class="h2" langKey="serv3-title">Lorem ipsum dolor sit amet</h3>
+                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
+                        laudantium.
                         Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                         Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -218,8 +234,9 @@
                     <i class="fa fa-shield" aria-hidden="true"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Lorem ipsum dolor sit amet</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                    <h3 class="h2" langKey="serv4-title">Lorem ipsum dolor sit amet</h3>
+                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
+                        laudantium.
                         Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                         Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -231,8 +248,9 @@
                     <i class="fa fa-shield" aria-hidden="true"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Lorem ipsum dolor sit amet</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                    <h3 class="h2" langKey="serv5-title">Lorem ipsum dolor sit amet</h3>
+                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
+                        laudantium.
                         Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                         Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -244,8 +262,9 @@
                     <i class="fa fa-shield" aria-hidden="true"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h2">Lorem ipsum dolor sit amet</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
+                    <h3 class="h2" langKey="serv6-title">Lorem ipsum dolor sit amet</h3>
+                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
+                        laudantium.
                         Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                         Sunt suscipit voluptas ipsa in tempora esse soluta sint.
                     </p>
@@ -262,7 +281,7 @@
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1--light">Our Clients</h1>
+                <h1 class="display-1--light" langKey="clints-title">Our Clients</h1>
             </div>
         </div> <!-- end section-header -->
 
@@ -396,7 +415,8 @@
             <div class="col-twelve">
                 <div class="copyright">
                     <span>© Copyright hirsat101</span>
-                    <span>Site Developed by <a href="https://amermostafa.netlify.app/">Amer Mostafa</a></span>
+                    <span>Site Developed by <a href="https://amermostafa.netlify.app/"
+                            style="z-index: 999999999999999999999999;">Amer Mostafa</a></span>
                 </div>
 
                 <div class="go-top">
@@ -408,8 +428,12 @@
         </div> <!-- end footer-bottom -->
 
     </footer> <!-- end footer -->
-
-
+    <div class="container-fluid fixed-contact-icon">
+        <div class="row">
+            <a href="tel:15551234567" class="call-btn"><i class="fa fa-phone"></i></a>
+            <a href="https://wa.me/15551234567"><i class="fa fa-whatsapp"></i></a>
+        </div>
+    </div>
     <!-- photoswipe background
     ================================================== -->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
@@ -472,6 +496,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/localization.js"></script>
 
 </body>
 

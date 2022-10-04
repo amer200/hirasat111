@@ -113,6 +113,11 @@ a:active {
  * # typography & general theme styles
  * 
  * ------------------------------------------------------------------- */
+.arb-font {
+    font-family: 'Cairo', sans-serif !important;
+    letter-spacing: 0.5px !important;
+}
+
 h1,
 h2,
 h3,
@@ -3878,3 +3883,20 @@ footer .row {
 
 
 /*# sourceMappingURL=main.css.map */
+
+.fixed-contact-icon {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    z-index: 9999999999999999999999;
+}
+
+.fixed-contact-icon a {
+    font-size: 5rem;
+    color: #FFC600;
+}
+
+/* .fixed-contact-icon .call-btn {
+    position: relative;
+    left: 90%;
+} */

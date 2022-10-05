@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title langKey="page-title">hirsat</title>
+    <title langKey="page_title">hirsat</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -20,9 +20,9 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/main/css/base.css">
+    <link rel="stylesheet" href="/main/css/vendor.css">
+    <link rel="stylesheet" href="/main/css/main.css">
     <!-- fonts
     ================================================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,13 +30,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-
+    <script src="/main/js/modernizr.js"></script>
+    <script src="/main/js/pace.min.js"></script>
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/main/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/main/images/logo.png" type="image/x-icon">
 
 </head>
 
@@ -48,7 +47,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="/">
-                <img src="images/logo.jpg" alt="Homepage">
+                <img src="/main/images/logo.jpg" alt="Homepage">
             </a>
         </div>
 
@@ -57,15 +56,15 @@
             <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
 
             <div class="header-nav__content">
-                <h3 langKey="nav-title">Navigation</h3>
+                <h3 langKey="nav_title">Navigation</h3>
 
                 <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll" href="#home" title="home" langKey="nav-home">Home</a>
+                    <li class="current"><a class="smoothscroll" href="#home" title="home" langKey="nav_home">Home</a>
                     </li>
-                    <li><a class="smoothscroll" href="#about" title="about" langKey="nav-about">About</a></li>
-                    <li><a class="smoothscroll" href="#services" title="services" langKey="nav-serv">Services</a></li>
-                    <li><a class="smoothscroll" href="#clients" title="clients" langKey="nav-clints">Clients</a></li>
-                    <li><a class="smoothscroll" href="#contact" title="contact" langKey="nav-contact">Contact</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about" langKey="nav_about">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="services" langKey="nav_serv">Services</a></li>
+                    <li><a class="smoothscroll" href="#clients" title="clients" langKey="nav_clints">Clients</a></li>
+                    <li><a class="smoothscroll" href="#contact" title="contact" langKey="nav_contact">Contact</a></li>
                 </ul>
                 <ul class="header-nav__list">
                     <li>
@@ -90,7 +89,7 @@
         </nav> <!-- end header-nav -->
 
         <a class="header-menu-toggle" href="#0">
-            <span class="header-menu-text" langKey="nav-menu">Menu</span>
+            <span class="header-menu-text" langKey="nav_menu">Menu</span>
             <span class="header-menu-icon"></span>
         </a>
 
@@ -99,7 +98,7 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg"
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="/main/images/hero-bg.jpg"
         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
@@ -109,13 +108,13 @@
 
             <div class="row home-content__main">
 
-                <h3 langKey="home-title">Welcome to Hirsat</h3>
+                <h3 langKey="home_title">Welcome to Hirsat</h3>
 
                 <div class="home-content__buttons">
-                    <a href="#contact" class="smoothscroll btn btn--stroke" langKey="home-contact-btn">
+                    <a href="#contact" class="smoothscroll btn btn--stroke" langKey="home_contact_btn">
                         Contact Us
                     </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke" langKey="home-about-btn">
+                    <a href="#about" class="smoothscroll btn btn--stroke" langKey="home_about_btn">
                         More About Us
                     </a>
                 </div>
@@ -154,18 +153,13 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1 display-1--light" langKey="about-title">About Us</h1>
+                <h1 class="display-1 display-1--light" langKey="about_title">About Us</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row about-desc" data-aos="fade-up">
             <div class="col-full">
-                <p langKey="about-content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt.
+                <p langKey="about_content">
                 </p>
             </div>
         </div> <!-- end about-desc -->
@@ -181,96 +175,11 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1--light" langKey="serv-title">Services</h1>
+                <h1 class="display-1--light" langKey="serv_title">Services</h1>
             </div>
         </div> <!-- end section-header -->
 
-        <div class="row services-list block-1-2 block-tab-full">
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" langKey="serv1-title">Lorem ipsum dolor sit amet</h3>
-                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
-                        laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" langKey="serv2-title">Lorem ipsum dolor sit amet</h3>
-                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
-                        laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" langKey="serv3-title">Lorem ipsum dolor sit amet</h3>
-                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
-                        laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" langKey="serv4-title">Lorem ipsum dolor sit amet</h3>
-                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
-                        laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" langKey="serv5-title">Lorem ipsum dolor sit amet</h3>
-                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
-                        laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="fa fa-shield" aria-hidden="true"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" langKey="serv6-title">Lorem ipsum dolor sit amet</h3>
-                    <p langKey="serv-content">Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum
-                        laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
+        <div class="row services-list block-1-2 block-tab-full" id="servicesList">
         </div> <!-- end services-list -->
 
     </section> <!-- end s-services -->
@@ -281,24 +190,24 @@
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1--light" langKey="clints-title">Our Clients</h1>
+                <h1 class="display-1--light" langKey="clints_title">Our Clients</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row clients-outer" data-aos="fade-up">
             <div class="col-full">
                 <div class="clients">
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-1.png" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-2.jpg" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-3.jpg" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-4.png" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-5.jpg" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-1.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-2.jpg" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-3.jpg" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-4.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-5.jpg" /></a>
 
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-1.png" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-2.jpg" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-3.jpg" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-4.png" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="images/clients/clint-5.jpg" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-1.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-2.jpg" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-3.jpg" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-4.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-5.jpg" /></a>
                 </div> <!-- end clients -->
             </div> <!-- end col-full -->
         </div> <!-- end clients-outer -->
@@ -493,10 +402,10 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/localization.js"></script>
+    <script src="/main/js/jquery-3.2.1.min.js"></script>
+    <script src="/main/js/plugins.js"></script>
+    <script src="/main/js/main.js"></script>
+    <script src="/main/js/localization.js"></script>
 
 </body>
 

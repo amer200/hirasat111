@@ -1,0 +1,95 @@
+<!doctype html>
+<html dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/admin/css/style.css">
+    <title>hirsat</title>
+</head>
+
+<body onload="">
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <%- include('includes/side-bar.ejs'); %>
+                <div class="col py-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>قسم: من نحن</h3>
+                            <form action="/admin/about" method="post">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">المحتوى بالعربي</label>
+                                    <textarea name="ar_txt" class="form-control" cols="30"
+                                        rows="10"><%=about.ar%></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">English content</label>
+                                    <textarea name="en_txt" class="form-control" cols="30"
+                                        rows="10"><%=about.en%></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">حفظ</button>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <h3>قسم: الخدمات</h3>
+                            <form action="/admin/services" method="post" class="form-serv">
+                                <% servs.forEach(s=>{%>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">اسم الخدمة بالعربي</label>
+                                        <input type="text" name="serv_title_ar" class="form-control"
+                                            value="<%=s.ar.title%>">
+                                        <label for="exampleInputEmail1" class="form-label">وصف الخدمة بالعربي</label>
+                                        <textarea name="serv_txt_ar" class="form-control" cols="30"
+                                            rows="5"><%=s.ar.txt%></textarea>
+                                        <label for="exampleInputEmail1" class="form-label">اسم الخدمة بالانجليزي</label>
+                                        <input type="text" name="serv_title_en" class="form-control"
+                                            value="<%=s.en.title%>">
+                                        <label for="exampleInputEmail1" class="form-label">وصف الخدمة بالانجليزي</label>
+                                        <textarea name="serv_txt_en" class="form-control" cols="30"
+                                            rows="5"><%=s.en.txt%></textarea>
+                                        <button type="button" class="btn btn-danger"
+                                            onclick="removeParent(this)">حذف</button>
+                                        <hr>
+                                    </div>
+                                    <%})%>
+                                        <div id="newServs">
+                                        </div>
+                                        <button type="button" class="btn btn-dark" onclick="addServ()">اضافة
+                                            خدمة</button>
+                                        <hr>
+                                        <button type="submit" class="btn btn-primary">حفظ</button>
+                            </form>
+                            <h3>قسم العملاء</h3>
+                            <form action="/admin/clints" method="post" class="form-serv" enctype="multipart/form-data">
+                                <%clints[0].imgs.forEach(c=>{%>
+                                    <div class="mb-3">
+                                        <input type="hidden" name="imgs" value="<%=c%>">
+                                        <img src="<%=c%>" alt="clint" style="width: 55px;">
+                                        <button type='button' class="btn btn-danger"
+                                            onclick="removeParent(this)">حذف</button>
+                                    </div>
+                                    <%})%>
+                                        <div class="mb-3">
+                                            <input type="file" name="clints" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-dark">حفظ</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <%- include('includes/loading.ejs'); %>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="/admin/js/main.js"></script>
+</body>
+
+</html>

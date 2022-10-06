@@ -9,7 +9,6 @@ exports.getContent = async (req, res) => {
     const about = await About.findOne();
     const servs = await Services.find();
     const clints = await Clints.find();
-    console.log(servs)
     res.status(200).json({
         about: about,
         servs: servs,

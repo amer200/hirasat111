@@ -8,6 +8,7 @@ const servSchema = mongoose.Schema({
         title: String,
         txt: String
     }
+
 })
 
 module.exports = mongoose.model('Servs', servSchema)

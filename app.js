@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
+const multer = require('multer');
 const port = process.env.PORT;
 const db = process.env.DB;
 
@@ -11,11 +13,28 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 /********************************************************************* */
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/uploads/clints')
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+        cb(null, file.fieldname + '-' + uniqueSuffix + file.originalname)
+    }
+})
+
+const upload = multer({
+    storage: storage
+})
+app.post('/admin/clints', upload.array('clints'));
+/********************************************************************* */
 //routes
 const mainRoutes = require('./routes/main');
-/********************************************************************* */
+const adminRoutes = require('./routes/admin');
+app.use('/admin', adminRoutes);
 
 app.use('/', mainRoutes);
+/********************************************************************* */
 
 mongoose.connect(db)
     .then(resu => {

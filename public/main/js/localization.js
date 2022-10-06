@@ -20,6 +20,18 @@ const removeServ = () => {
         s.remove()
     })
 }
+/** clint component */
+const clintsContainer = document.getElementById('clintsList');
+const createClints = (imgPath) => {
+    const clintLink = document.createElement('a');
+    clintLink.classList = 'clients__slide';
+    clintLink.setAttribute('href', '#0');
+    const clintImg = document.createElement('img');
+    clintImg.setAttribute('src', imgPath)
+    clintLink.appendChild(clintImg);
+    clintsContainer.appendChild(clintLink)
+}
+
 /****** */
 
 let translations = {

@@ -107,3 +107,19 @@ exports.postClints = (req, res) => {
             console.log(err)
         })
 }
+exports.getLogin = (req, res) => {
+    res.render('admin/login')
+}
+exports.postLogin = (req, res) => {
+    const password = req.body.password;
+    if (process.env.ADMINPWD == password) {
+        req.session.user = true;
+        res.redirect('/admin');
+    } else {
+        res.send('password wron !')
+    }
+}
+exports.signOut = (req, res) => {
+    req.session.destroy()
+    res.redirect('/admin')
+}

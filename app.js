@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 const multer = require('multer');
+const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
 const port = process.env.PORT;
 const db = process.env.DB;
 
@@ -12,6 +14,17 @@ const db = process.env.DB;
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
+/********************************************************************* */
+const store = new MongoDBStore({
+    uri: db,
+    collection: 'mySessions'
+});
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: store
+}))
 /********************************************************************* */
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

@@ -197,8 +197,10 @@
         <div class="row clients-outer" data-aos="fade-up">
             <div class="col-full">
                 <div class="clients" id="clintsList">
-                    <!-- <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-1.png" /></a>
-                    <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-2.jpg" /></a>
+                    <%clints.forEach( c=>{%>
+                        <a href="#0" title="" class="clients__slide"><img src="<%=c%>" /></a>
+                        <%})%>
+                            <!-- <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-2.jpg" /></a>
                     <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-3.jpg" /></a>
                     <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-4.png" /></a>
                     <a href="#0" title="" class="clients__slide"><img src="/main/images/clients/clint-5.jpg" /></a>

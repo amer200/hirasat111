@@ -21,16 +21,23 @@ const removeServ = () => {
     })
 }
 /** clint component */
-const clintsContainer = document.getElementById('clintsList');
-const createClints = (imgPath) => {
-    const clintLink = document.createElement('a');
-    clintLink.classList = 'clients__slide';
-    clintLink.setAttribute('href', '#0');
-    const clintImg = document.createElement('img');
-    clintImg.setAttribute('src', imgPath)
-    clintLink.appendChild(clintImg);
-    clintsContainer.appendChild(clintLink)
-}
+// const clintsContainer = document.getElementById('clintsList');
+// const slidTrack = document.getElementsByClassName('slick-track')[0];
+// console.log(slidTrack);
+// const createClints = (imgPath, i) => {
+//     const clintLink = document.createElement('a');
+//     clintLink.setAttribute('href', '#0');
+//     clintLink.setAttribute('title', ' ');
+//     clintLink.classList = 'clients__slide slick-slide slick-cloned';
+//     clintLink.setAttribute("data-slick-index", i);
+//     clintLink.setAttribute('aria-hidden', 'true');
+//     clintLink.setAttribute('tabindex', '-1');
+//     clintLink.setAttribute('style', 'width: 194px;');
+//     const clintImg = document.createElement('img');
+//     clintImg.setAttribute('src', imgPath);
+//     clintLink.appendChild(clintImg);
+//     slidTrack.appendChild(clintLink)
+// }
 
 /****** */
 
@@ -95,6 +102,8 @@ async function fetchContentAndApplay() {
             let content = JSON.parse(data);
             translations.en.about_content = content.about.en;
             translations.ar.about_content = content.about.ar;
+            console.log(content)
+            let i = 0;
             changeElemintsLang(lang)
             servs = content.servs
             createServ(servs)

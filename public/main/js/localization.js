@@ -62,6 +62,7 @@ let translations = {
         "about_content": '   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt',
         /**services */
         "serv_title": 'Services',
+        "serv_content": ' We are pleased as a company specialized in security guards To offer you the best prices for security guards It is accessible to all, in addition to the availability of safe guards with a degree of efficiency and appropriate training. What distinguishes us from others First, all employees of the security and administrative guards are 100% Saudi. Secondly, our prices are affordable for everyone. Third, we have a number of big clients whose names are known in the business market. Fourth / our branches at the level of the Kingdom of Saudi Arabia. Our motto is (working according to security guards controls) We look forward to cooperating with you out of our keenness to protect your facility to offer you the ',
         /**clints */
         "clints_title": 'Our Clints',
     },
@@ -88,6 +89,7 @@ let translations = {
         "about_content": 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.',
         /**services */
         "serv_title": 'خدماتنا',
+        "serv_content": 'يسعدنا كشركة متخصصة في الحراسات الامنيةبأن نتقدم لكم بأفضل الأسعار للحراسات الأمنيةوهي في متناول الجميع ، بالإضافة إلى توفر حراس آمن على قدر من الكفاءة والتدريب المناسب .ما يميزنا عن غيرنا /أولاً / جميع منسوبي الحراسات الأمنية والإدارية سعوديين 100 % .ثانياً / أسعارنا في متناول الجميع .ثالثاً / لدينا عدد من العملاء الكبار والمعروفة أسمائهم في سوق الأعمال .رابعاً / فروعنا على مستوى المملكة العربية السعودية .شعارنا هو (العمل وفق ضوابط الحراسات الأمنية)ونتطلع للتعاون معكم من منطلق حرصنا على حماية منشأتكم لنقدم لكم الخدمات التالية / ',
         /**clints */
         "clints_title": 'عملائنا',
     },

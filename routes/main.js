@@ -5,5 +5,6 @@ const mainControllers = require('../controllers/main');
 
 route.get('/', mainControllers.getMainPage);
 route.get('/content', mainControllers.getContent);
+route.post('/contact', mainControllers.contactUs);
 
 module.exports = route;

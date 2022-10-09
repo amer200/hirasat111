@@ -13,7 +13,7 @@ async function mainMail(name, email, subject, message) {
     });
     const mailOption = {
         from: process.env.GMAIL_USER,
-        to: process.env.EMAIL,
+        to: email,
         subject: subject,
         html: `You got a message from 
       Email : ${email}
@@ -50,6 +50,7 @@ exports.contactUs = async (req, res) => {
     const email = req.body.email;
     const subject = req.body.subject;
     const msg = req.body.msg;
+    console.log(req.body)
     mainMail(name, email, subject, msg)
         .then(resu => {
             res.status(200).json({

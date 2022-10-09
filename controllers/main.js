@@ -22,7 +22,6 @@ async function mainMail(name, email, subject, message) {
     };
     try {
         await transporter.sendMail(mailOption);
-        console.log(mailOption);
         return Promise.resolve("Message Sent Successfully!");
     } catch (error) {
         return Promise.reject(error);
@@ -50,12 +49,9 @@ exports.contactUs = async (req, res) => {
     const email = req.body.email;
     const subject = req.body.subject;
     const msg = req.body.msg;
-    console.log(req.body)
     mainMail(name, email, subject, msg)
         .then(resu => {
-            res.status(200).json({
-                msg: 'ok'
-            })
+            res.status(200).json("OK")
         })
         .catch(err => {
             console.log(err)
